@@ -1,0 +1,40 @@
+<%- include("partials/header") %>
+
+<div class="ui main text class">
+	<div class="ui huge header">
+		Blog App
+	</div>
+	<div class="ui top attached segment container">
+		<div class="ui divided items">
+			<% blogs.forEach(function(blog) { %>
+				<div class="item">
+					<div class="image">
+						<img src="<%= blog.image %>">
+					</div>
+					<div class="content">
+						<a class="header" href="/blogs/<%= blog._id %>"><%= blog.title %></a>
+						<div class="meta">
+							<span><%= blog.created.toDateString() %></span>
+						</div>
+						<div class="description">
+							<p>
+								<% if (blog.body.length > 100){ %>
+									<%= blog.body.substring(0, 100) %>...
+								<% } else {%>
+								<%= blog.body.substring(0, 100) %>
+								<% } %>
+							</p>
+						</div>
+					</div>
+					<div class="extra">
+						<a id="rd_more" class="ui basic teal button" href="/blogs/<%= blog._id %>">
+							Read more!
+						</a>
+					</div>
+				</div>
+			<% }); %>
+		</div>
+	</div>
+</div>
+
+<%- include("partials/footer") %>

@@ -1,0 +1,25 @@
+/* css is here */
+i.icon {
+	font-size: 2em;
+}
+
+.container.main {
+	margin-top: 5em;
+}
+
+#delete {
+	display: inline;
+}
+
+#rd_more {
+	float: right;
+}
+
+#h3_show {
+	margin-top: 15px;
+	margin-bottom: 10px;
+}
+
+#show_body {
+	margin-bottom: 15px;
+}
